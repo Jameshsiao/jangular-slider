@@ -1,0 +1,99 @@
+slider, [slider] {
+  display: inline-block;
+  position: relative;
+  height: 7px;
+  width: 100%;
+  margin: 5px 0 45px;
+  vertical-align: middle;
+  /* ScaleItem */ }
+  slider div, [slider] div {
+    white-space: nowrap;
+    position: absolute; }
+    slider div.bar, [slider] div.bar {
+      width: 91%;
+      height: 100%;
+      border-radius: 7px;
+      background: #444;
+      overflow: hidden;
+      margin-left: 15px; }
+      slider div.bar .selection, [slider] div.bar .selection {
+        width: 0%;
+        height: 100%;
+        background: #13b6ff; }
+    slider div.handle, [slider] div.handle {
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+      top: -8px;
+      background-color: #fff;
+      border: 1px solid #000;
+      z-index: 2;
+      border-radius: 100%; }
+      slider div.handle:after, [slider] div.handle:after {
+        content: '';
+        background-color: #777;
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        border-radius: 100%; }
+        slider div.handle:after:hover, [slider] div.handle:after:hover {
+          background-color: #000; }
+      slider div.handle.active:after, [slider] div.handle.active:after {
+        background-color: #f00; }
+    slider div.bubble, [slider] div.bubble {
+      display: none;
+      cursor: default;
+      top: -22px;
+      padding: 1px 3px 1px 3px;
+      font-size: 0.7em;
+      font-family: sans-serif; }
+      slider div.bubble.active, [slider] div.bubble.active {
+        display: inline-block; }
+      slider div.bubble.limit, [slider] div.bubble.limit {
+        color: #777; }
+  slider .scaleItems, [slider] .scaleItems {
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: -20px;
+    padding: 0 15px; }
+    slider .scaleItems .item, [slider] .scaleItems .item {
+      position: absolute;
+      display: block;
+      border: 0;
+      padding: 0;
+      margin: 0;
+      height: auto;
+      overflow: visible;
+      font-size: 11px;
+      color: #7d7d7d;
+      background: transparent;
+      /*&.low, &.high {
+        bottom: -27px;
+        color: black;
+        font-size: 14px;
+        font-weight: 700;
+
+        .tick  {
+          height: 15px;
+        }
+      }*/ }
+      slider .scaleItems .item .tick, [slider] .scaleItems .item .tick {
+        width: 1px;
+        height: 8px;
+        background-color: #dfdfdf;
+        margin: 0 auto 2px; }
+      slider .scaleItems .item .tick, slider .scaleItems .item .tickname, [slider] .scaleItems .item .tick, [slider] .scaleItems .item .tickname {
+        display: block;
+        position: relative; }
+      slider .scaleItems .item .tickname, [slider] .scaleItems .item .tickname {
+        height: 18px;
+        width: 30px;
+        overflow: visible; }
+        slider .scaleItems .item .tickname .inner-text, [slider] .scaleItems .item .tickname .inner-text {
+          position: absolute;
+          bottom: 0; }
+
+/*# sourceMappingURL=slider.css.map */

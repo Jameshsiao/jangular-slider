@@ -1,0 +1,127 @@
+$height: 7px;
+slider, [slider] {
+  display: inline-block;
+  position: relative;
+  height: $height;
+  width: 100%;
+  margin: 5px 0 45px;
+  vertical-align: middle;
+
+  div {
+    white-space: nowrap;
+    position: absolute;
+
+    &.bar {
+      width: 91%;
+      height: 100%;
+      border-radius: $height;
+      background: #444;
+      overflow: hidden;
+      margin-left: 15px;
+
+      .selection {
+        width: 0%;
+        height: 100%;
+        background: #13b6ff;
+      }
+    }
+
+    &.handle {
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+      top: -8px;
+      background-color: #fff;
+      border: 1px solid #000;
+      z-index: 2;
+      border-radius: 100%;
+
+      &:after {
+        content: '';
+        background-color: #777;
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        border-radius: 100%;
+
+        &:hover {
+          background-color: #000;
+        }
+      }
+
+      &.active:after {
+        background-color: #f00;
+      }
+    }
+
+    &.bubble {
+      display: none;
+      cursor: default;
+      top: -22px;
+      padding: 1px 3px 1px 3px;
+      font-size: 0.7em;
+      font-family: sans-serif;
+
+      &.active {
+        display: inline-block;
+      }
+
+      &.limit {
+        color: #777;
+      }
+    }
+  }
+
+  /* ScaleItem */
+  .scaleItems {
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: -20px;
+    padding: 0 15px;
+    .item {
+      position: absolute;
+      display: block;
+      border: 0;
+      padding: 0;
+      margin: 0;
+      height: auto;
+      overflow: visible;
+      font-size: 11px;
+      color: #7d7d7d;
+      background: transparent;
+      /*&.low, &.high {
+        bottom: -27px;
+        color: black;
+        font-size: 14px;
+        font-weight: 700;
+
+        .tick  {
+          height: 15px;
+        }
+      }*/
+
+      .tick {
+        width: 1px;
+        height: 8px;
+        background-color: #dfdfdf;
+        margin: 0 auto 2px;
+      }
+      .tick, .tickname {
+        display: block;
+        position: relative;
+      }
+      .tickname {
+        height: 18px;
+        width: 30px;
+        overflow: visible;
+        .inner-text {
+          position: absolute;
+          bottom: 0;
+        }
+      }
+    }
+  }
+}
